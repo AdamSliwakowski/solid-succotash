@@ -12,6 +12,7 @@
 		0CBE7D901CCAB0630007E48A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE7D851CCAB0630007E48A /* Assets.xcassets */; };
 		0CBE7D911CCAB0630007E48A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE7D881CCAB0630007E48A /* AppDelegate.swift */; };
 		0CBE7D921CCAB0630007E48A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE7D8B1CCAB0630007E48A /* Main.storyboard */; };
+		0CBE7D941CCAB2EE0007E48A /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE7D931CCAB2EE0007E48A /* questions.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		0CBE7D851CCAB0630007E48A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CBE7D881CCAB0630007E48A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CBE7D8B1CCAB0630007E48A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		0CBE7D931CCAB2EE0007E48A /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		0CBE7D841CCAB0630007E48A /* Content */ = {
 			isa = PBXGroup;
 			children = (
+				0CBE7D931CCAB2EE0007E48A /* questions.json */,
 				0CBE7D851CCAB0630007E48A /* Assets.xcassets */,
 			);
 			path = Content;
@@ -184,6 +187,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CBE7D941CCAB2EE0007E48A /* questions.json in Resources */,
 				0CBE7D8E1CCAB0630007E48A /* Info.plist in Resources */,
 				0CBE7D901CCAB0630007E48A /* Assets.xcassets in Resources */,
 				0CBE7D8F1CCAB0630007E48A /* LaunchScreen.storyboard in Resources */,
@@ -348,6 +352,7 @@
 				0CBE7D781CCAAE6C0007E48A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

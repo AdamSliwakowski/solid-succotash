@@ -1,0 +1,55 @@
+{
+  "blocks": [
+    {
+      "mandatory": true,
+      "questions": [
+        {
+          "question": "Could you sleep well last night?",
+          "image": "question1.png"
+        },
+        {
+          "question": "Are you feeling sad ?",
+          "image": "question2.png"
+        },
+        {
+          "question": "Are you feeling hopeless?",
+          "image": "question3.png"
+        }
+      ]
+    },
+    {
+      "mandatory": true,
+      "questions": [
+        {
+          "question": "Do you currently have less interesting in things you usually enjoy?",
+          "image": "question4.png"
+        },
+        {
+          "question": "Do you feel like you are incapable of feeling joy right now?",
+          "image": "question5.png"
+        },
+        {
+          "question": "Do you feel tired and exhausted?",
+          "image": "question6.png"
+        }
+      ]
+    },
+    {
+      "mandatory": false,
+      "questions": [
+        {
+          "question": "Do feel exhausted by daily activities much quicker than usual?",
+          "image": "question7.png"
+        },
+        {
+          "question": "Do you feel like you are constantly failing your goals?",
+          "image": "question8.png"
+        },
+        {
+          "question": "Is it easy for you to make decisions currently?",
+          "image": "question9.png"
+        }
+      ]
+    }
+  ]
+}
