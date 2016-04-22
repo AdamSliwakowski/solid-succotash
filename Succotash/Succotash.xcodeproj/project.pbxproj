@@ -18,6 +18,7 @@
 		0CBE7D9E1CCAB6FA0007E48A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBE7D9C1CCAB6FA0007E48A /* SwiftyJSON.framework */; };
 		0CBE7D9F1CCAB6FA0007E48A /* SwiftyTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBE7D9D1CCAB6FA0007E48A /* SwiftyTimer.framework */; };
 		0CC0F6281CCABE4B006BAB7E /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0F6271CCABE4B006BAB7E /* QuestionsViewController.swift */; };
+		0CC0F62A1CCAC25C006BAB7E /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0F6291CCAC25C006BAB7E /* QuestionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		0CBE7D9C1CCAB6FA0007E48A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = ../Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		0CBE7D9D1CCAB6FA0007E48A /* SwiftyTimer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyTimer.framework; path = ../Carthage/Build/iOS/SwiftyTimer.framework; sourceTree = "<group>"; };
 		0CC0F6271CCABE4B006BAB7E /* QuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
+		0CC0F6291CCAC25C006BAB7E /* QuestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		0CBE7D8C1CCAB0630007E48A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0CC0F6291CCAC25C006BAB7E /* QuestionCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				0CBE7D981CCAB44E0007E48A /* QuestionsBlock.swift in Sources */,
 				0CC0F6281CCABE4B006BAB7E /* QuestionsViewController.swift in Sources */,
 				0CBE7D911CCAB0630007E48A /* AppDelegate.swift in Sources */,
+				0CC0F62A1CCAC25C006BAB7E /* QuestionCell.swift in Sources */,
 				0CBE7D961CCAB43F0007E48A /* Question.swift in Sources */,
 				0CBE7D9A1CCAB66C0007E48A /* JSONExtension.swift in Sources */,
 			);
