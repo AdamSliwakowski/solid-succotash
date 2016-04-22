@@ -15,6 +15,9 @@
 		0CBE7D941CCAB2EE0007E48A /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE7D931CCAB2EE0007E48A /* questions.json */; };
 		0CBE7D961CCAB43F0007E48A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE7D951CCAB43F0007E48A /* Question.swift */; };
 		0CBE7D981CCAB44E0007E48A /* QuestionsBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE7D971CCAB44E0007E48A /* QuestionsBlock.swift */; };
+		0CBE7D9A1CCAB66C0007E48A /* JSONFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE7D991CCAB66C0007E48A /* JSONFile.swift */; };
+		0CBE7D9E1CCAB6FA0007E48A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBE7D9C1CCAB6FA0007E48A /* SwiftyJSON.framework */; };
+		0CBE7D9F1CCAB6FA0007E48A /* SwiftyTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBE7D9D1CCAB6FA0007E48A /* SwiftyTimer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		0CBE7D931CCAB2EE0007E48A /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
 		0CBE7D951CCAB43F0007E48A /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		0CBE7D971CCAB44E0007E48A /* QuestionsBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsBlock.swift; sourceTree = "<group>"; };
+		0CBE7D991CCAB66C0007E48A /* JSONFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFile.swift; sourceTree = "<group>"; };
+		0CBE7D9C1CCAB6FA0007E48A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = ../Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		0CBE7D9D1CCAB6FA0007E48A /* SwiftyTimer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyTimer.framework; path = ../Carthage/Build/iOS/SwiftyTimer.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +40,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CBE7D9E1CCAB6FA0007E48A /* SwiftyJSON.framework in Frameworks */,
+				0CBE7D9F1CCAB6FA0007E48A /* SwiftyTimer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +51,7 @@
 		0CBE7D5B1CCAAE6C0007E48A = {
 			isa = PBXGroup;
 			children = (
+				0CBE7DA01CCAB7160007E48A /* Frameworks */,
 				0CBE7D661CCAAE6C0007E48A /* Succotash */,
 				0CBE7D651CCAAE6C0007E48A /* Products */,
 			);
@@ -61,7 +70,6 @@
 			children = (
 				0CBE7D7F1CCAB0630007E48A /* Base.lproj */,
 				0CBE7D841CCAB0630007E48A /* Content */,
-				0CBE7D861CCAB0630007E48A /* Libraries */,
 				0CBE7D871CCAB0630007E48A /* Logic */,
 				0CBE7D891CCAB0630007E48A /* Model */,
 				0CBE7D8A1CCAB0630007E48A /* Storyboard */,
@@ -89,17 +97,11 @@
 			path = Content;
 			sourceTree = "<group>";
 		};
-		0CBE7D861CCAB0630007E48A /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Libraries;
-			sourceTree = "<group>";
-		};
 		0CBE7D871CCAB0630007E48A /* Logic */ = {
 			isa = PBXGroup;
 			children = (
 				0CBE7D881CCAB0630007E48A /* AppDelegate.swift */,
+				0CBE7D991CCAB66C0007E48A /* JSONFile.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -135,6 +137,15 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		0CBE7DA01CCAB7160007E48A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0CBE7D9C1CCAB6FA0007E48A /* SwiftyJSON.framework */,
+				0CBE7D9D1CCAB6FA0007E48A /* SwiftyTimer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,6 +156,7 @@
 				0CBE7D601CCAAE6C0007E48A /* Sources */,
 				0CBE7D611CCAAE6C0007E48A /* Frameworks */,
 				0CBE7D621CCAAE6C0007E48A /* Resources */,
+				0CBE7D9B1CCAB6990007E48A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -203,6 +215,24 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0CBE7D9B1CCAB6990007E48A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyTimer.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0CBE7D601CCAAE6C0007E48A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -211,6 +241,7 @@
 				0CBE7D981CCAB44E0007E48A /* QuestionsBlock.swift in Sources */,
 				0CBE7D911CCAB0630007E48A /* AppDelegate.swift in Sources */,
 				0CBE7D961CCAB43F0007E48A /* Question.swift in Sources */,
+				0CBE7D9A1CCAB66C0007E48A /* JSONFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
