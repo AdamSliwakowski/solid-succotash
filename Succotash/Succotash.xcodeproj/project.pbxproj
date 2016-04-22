@@ -19,6 +19,7 @@
 		0CBE7D9F1CCAB6FA0007E48A /* SwiftyTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBE7D9D1CCAB6FA0007E48A /* SwiftyTimer.framework */; };
 		0CC0F6281CCABE4B006BAB7E /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0F6271CCABE4B006BAB7E /* QuestionsViewController.swift */; };
 		0CC0F62A1CCAC25C006BAB7E /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0F6291CCAC25C006BAB7E /* QuestionCell.swift */; };
+		0CC0F62C1CCACEF9006BAB7E /* WaitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0F62B1CCACEF9006BAB7E /* WaitingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		0CBE7D9D1CCAB6FA0007E48A /* SwiftyTimer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyTimer.framework; path = ../Carthage/Build/iOS/SwiftyTimer.framework; sourceTree = "<group>"; };
 		0CC0F6271CCABE4B006BAB7E /* QuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		0CC0F6291CCAC25C006BAB7E /* QuestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
+		0CC0F62B1CCACEF9006BAB7E /* WaitingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				0CC0F6271CCABE4B006BAB7E /* QuestionsViewController.swift */,
+				0CC0F62B1CCACEF9006BAB7E /* WaitingViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				0CBE7D981CCAB44E0007E48A /* QuestionsBlock.swift in Sources */,
 				0CC0F6281CCABE4B006BAB7E /* QuestionsViewController.swift in Sources */,
 				0CBE7D911CCAB0630007E48A /* AppDelegate.swift in Sources */,
+				0CC0F62C1CCACEF9006BAB7E /* WaitingViewController.swift in Sources */,
 				0CC0F62A1CCAC25C006BAB7E /* QuestionCell.swift in Sources */,
 				0CBE7D961CCAB43F0007E48A /* Question.swift in Sources */,
 				0CBE7D9A1CCAB66C0007E48A /* JSONExtension.swift in Sources */,

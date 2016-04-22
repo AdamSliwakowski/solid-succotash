@@ -17,10 +17,21 @@ class QuestionsViewController: UIViewController {
     @IBOutlet weak var noButton: UIButton!
     
     var questionsBlock: QuestionsBlock!
+    var questionsBlockIndex: Int! {
+        didSet {
+            loadQuestionsBlock()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        questionsBlock = JSON.read("questions")["blocks"].arrayValue.map { QuestionsBlock(json: $0) }.first!
+        questionsBlockIndex = 0
+    }
+    
+    private func loadQuestionsBlock() {
+        let questionBlocks = JSON.read("questions")["blocks"].arrayValue.map { QuestionsBlock(json: $0) }
+        guard questionsBlockIndex < questionBlocks.count else { return }
+        questionsBlock = questionBlocks[questionsBlockIndex]
     }
 }
 
@@ -57,6 +68,17 @@ extension QuestionsViewController {
             collectionView.scrollToItemAtIndexPath(nextIndexPath, atScrollPosition: .Left, animated: true)
         } else {
             configureButtonsForCurrentQuestion()
+            presentWaitingViewController()
+        }
+    }
+    
+    private func presentWaitingViewController() {
+        let waitingVC = storyboard?.instantiateViewControllerWithIdentifier("WaitingViewController") as! WaitingViewController
+        presentViewController(waitingVC, animated: true) {
+            self.questionsBlockIndex = self.questionsBlockIndex + 1
+            self.collectionView.reloadData()
+            self.collectionView.scrollToItemAtIndexPath(NSIndexPath(forItem: 0, inSection: 0), atScrollPosition: .Left, animated: true)
+            self.configureButtonsForCurrentQuestion()
         }
     }
 }

@@ -157,10 +157,10 @@
             </objects>
             <point key="canvasLocation" x="568.5" y="302.5"/>
         </scene>
-        <!--Questions View Controller-->
+        <!--Waiting View Controller-->
         <scene sceneID="p5r-dU-nAB">
             <objects>
-                <viewController id="DFi-JO-TjT" customClass="QuestionsViewController" customModule="Succotash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WaitingViewController" modalTransitionStyle="flipHorizontal" id="DFi-JO-TjT" customClass="WaitingViewController" customModule="Succotash" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lcM-ad-8qB"/>
                         <viewControllerLayoutGuide type="bottom" id="nNf-Tk-ZfM"/>
