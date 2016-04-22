@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0CBE7D8E1CCAB0630007E48A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE7D801CCAB0630007E48A /* Info.plist */; };
 		0CBE7D8F1CCAB0630007E48A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE7D821CCAB0630007E48A /* LaunchScreen.storyboard */; };
 		0CBE7D901CCAB0630007E48A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE7D851CCAB0630007E48A /* Assets.xcassets */; };
 		0CBE7D911CCAB0630007E48A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE7D881CCAB0630007E48A /* AppDelegate.swift */; };
@@ -15,7 +14,7 @@
 		0CBE7D941CCAB2EE0007E48A /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE7D931CCAB2EE0007E48A /* questions.json */; };
 		0CBE7D961CCAB43F0007E48A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE7D951CCAB43F0007E48A /* Question.swift */; };
 		0CBE7D981CCAB44E0007E48A /* QuestionsBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE7D971CCAB44E0007E48A /* QuestionsBlock.swift */; };
-		0CBE7D9A1CCAB66C0007E48A /* JSONFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE7D991CCAB66C0007E48A /* JSONFile.swift */; };
+		0CBE7D9A1CCAB66C0007E48A /* JSONExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE7D991CCAB66C0007E48A /* JSONExtension.swift */; };
 		0CBE7D9E1CCAB6FA0007E48A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBE7D9C1CCAB6FA0007E48A /* SwiftyJSON.framework */; };
 		0CBE7D9F1CCAB6FA0007E48A /* SwiftyTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBE7D9D1CCAB6FA0007E48A /* SwiftyTimer.framework */; };
 /* End PBXBuildFile section */
@@ -30,7 +29,7 @@
 		0CBE7D931CCAB2EE0007E48A /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
 		0CBE7D951CCAB43F0007E48A /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		0CBE7D971CCAB44E0007E48A /* QuestionsBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsBlock.swift; sourceTree = "<group>"; };
-		0CBE7D991CCAB66C0007E48A /* JSONFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFile.swift; sourceTree = "<group>"; };
+		0CBE7D991CCAB66C0007E48A /* JSONExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONExtension.swift; sourceTree = "<group>"; };
 		0CBE7D9C1CCAB6FA0007E48A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = ../Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		0CBE7D9D1CCAB6FA0007E48A /* SwiftyTimer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyTimer.framework; path = ../Carthage/Build/iOS/SwiftyTimer.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				0CBE7D881CCAB0630007E48A /* AppDelegate.swift */,
-				0CBE7D991CCAB66C0007E48A /* JSONFile.swift */,
+				0CBE7D991CCAB66C0007E48A /* JSONExtension.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -156,7 +155,7 @@
 				0CBE7D601CCAAE6C0007E48A /* Sources */,
 				0CBE7D611CCAAE6C0007E48A /* Frameworks */,
 				0CBE7D621CCAAE6C0007E48A /* Resources */,
-				0CBE7D9B1CCAB6990007E48A /* ShellScript */,
+				0CBE7D9B1CCAB6990007E48A /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -206,7 +205,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CBE7D941CCAB2EE0007E48A /* questions.json in Resources */,
-				0CBE7D8E1CCAB0630007E48A /* Info.plist in Resources */,
 				0CBE7D901CCAB0630007E48A /* Assets.xcassets in Resources */,
 				0CBE7D8F1CCAB0630007E48A /* LaunchScreen.storyboard in Resources */,
 				0CBE7D921CCAB0630007E48A /* Main.storyboard in Resources */,
@@ -216,7 +214,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0CBE7D9B1CCAB6990007E48A /* ShellScript */ = {
+		0CBE7D9B1CCAB6990007E48A /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -225,6 +223,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyTimer.framework",
 			);
+			name = Carthage;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,7 +240,7 @@
 				0CBE7D981CCAB44E0007E48A /* QuestionsBlock.swift in Sources */,
 				0CBE7D911CCAB0630007E48A /* AppDelegate.swift in Sources */,
 				0CBE7D961CCAB43F0007E48A /* Question.swift in Sources */,
-				0CBE7D9A1CCAB66C0007E48A /* JSONFile.swift in Sources */,
+				0CBE7D9A1CCAB66C0007E48A /* JSONExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +353,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = Succotash/Base.lproj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sliwakowski.Succotash;
@@ -365,6 +365,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = Succotash/Base.lproj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sliwakowski.Succotash;

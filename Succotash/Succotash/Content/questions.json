@@ -1,7 +1,7 @@
 {
   "blocks": [
     {
-      "mandatory": true,
+      "is_mandatory": true,
       "questions": [
         {
           "question": "Could you sleep well last night?",
@@ -18,7 +18,7 @@
       ]
     },
     {
-      "mandatory": true,
+      "is_mandatory": true,
       "questions": [
         {
           "question": "Do you currently have less interesting in things you usually enjoy?",
@@ -35,7 +35,7 @@
       ]
     },
     {
-      "mandatory": false,
+      "is_mandatory": false,
       "questions": [
         {
           "question": "Do feel exhausted by daily activities much quicker than usual?",
