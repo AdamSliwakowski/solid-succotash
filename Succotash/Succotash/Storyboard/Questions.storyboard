@@ -249,6 +249,9 @@
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="timeLeftLabel" destination="2W1-0Q-v2n" id="IFn-bs-czK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O6n-fy-p42" sceneMemberID="firstResponder"/>
             </objects>
