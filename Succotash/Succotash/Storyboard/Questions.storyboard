@@ -103,6 +103,7 @@
                                 </cells>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="o6C-DD-UEy"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Xc5-Hs-iw8"/>
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vy-64-GT1" userLabel="NoButton">
@@ -112,6 +113,9 @@
                                     <constraint firstAttribute="width" constant="90" id="rvJ-t9-fgJ"/>
                                 </constraints>
                                 <state key="normal" image="icon_button_no"/>
+                                <connections>
+                                    <action selector="handleNoButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oou-Wh-naD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNU-eh-FjR" userLabel="YesButton">
                                 <rect key="frame" x="223" y="511" width="90" height="90"/>
@@ -120,6 +124,9 @@
                                     <constraint firstAttribute="height" constant="90" id="NZd-tV-OmV"/>
                                 </constraints>
                                 <state key="normal" image="icon_button_yes"/>
+                                <connections>
+                                    <action selector="handleYesButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="wRd-Ls-GpS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98431372549019602" green="0.9882352941176471" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
@@ -142,6 +149,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="collectionView" destination="xwB-zn-g6l" id="bHY-Lb-s9U"/>
+                        <outlet property="noButton" destination="9vy-64-GT1" id="oNN-u7-1xr"/>
+                        <outlet property="yesButton" destination="JNU-eh-FjR" id="4zf-se-kln"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
