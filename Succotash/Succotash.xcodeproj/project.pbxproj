@@ -7,21 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0CBE7D681CCAAE6C0007E48A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE7D671CCAAE6C0007E48A /* AppDelegate.swift */; };
-		0CBE7D6A1CCAAE6C0007E48A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE7D691CCAAE6C0007E48A /* ViewController.swift */; };
-		0CBE7D6D1CCAAE6C0007E48A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE7D6B1CCAAE6C0007E48A /* Main.storyboard */; };
-		0CBE7D6F1CCAAE6C0007E48A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE7D6E1CCAAE6C0007E48A /* Assets.xcassets */; };
-		0CBE7D721CCAAE6C0007E48A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE7D701CCAAE6C0007E48A /* LaunchScreen.storyboard */; };
+		0CBE7D8E1CCAB0630007E48A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE7D801CCAB0630007E48A /* Info.plist */; };
+		0CBE7D8F1CCAB0630007E48A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE7D821CCAB0630007E48A /* LaunchScreen.storyboard */; };
+		0CBE7D901CCAB0630007E48A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE7D851CCAB0630007E48A /* Assets.xcassets */; };
+		0CBE7D911CCAB0630007E48A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE7D881CCAB0630007E48A /* AppDelegate.swift */; };
+		0CBE7D921CCAB0630007E48A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE7D8B1CCAB0630007E48A /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0CBE7D641CCAAE6C0007E48A /* Succotash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Succotash.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0CBE7D671CCAAE6C0007E48A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0CBE7D691CCAAE6C0007E48A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0CBE7D6C1CCAAE6C0007E48A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0CBE7D6E1CCAAE6C0007E48A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0CBE7D711CCAAE6C0007E48A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0CBE7D731CCAAE6C0007E48A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CBE7D811CCAB0630007E48A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Info.plist; sourceTree = "<group>"; };
+		0CBE7D831CCAB0630007E48A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0CBE7D851CCAB0630007E48A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0CBE7D881CCAB0630007E48A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0CBE7D8B1CCAB0630007E48A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +53,77 @@
 		0CBE7D661CCAAE6C0007E48A /* Succotash */ = {
 			isa = PBXGroup;
 			children = (
-				0CBE7D671CCAAE6C0007E48A /* AppDelegate.swift */,
-				0CBE7D691CCAAE6C0007E48A /* ViewController.swift */,
-				0CBE7D6B1CCAAE6C0007E48A /* Main.storyboard */,
-				0CBE7D6E1CCAAE6C0007E48A /* Assets.xcassets */,
-				0CBE7D701CCAAE6C0007E48A /* LaunchScreen.storyboard */,
-				0CBE7D731CCAAE6C0007E48A /* Info.plist */,
+				0CBE7D7F1CCAB0630007E48A /* Base.lproj */,
+				0CBE7D841CCAB0630007E48A /* Content */,
+				0CBE7D861CCAB0630007E48A /* Libraries */,
+				0CBE7D871CCAB0630007E48A /* Logic */,
+				0CBE7D891CCAB0630007E48A /* Model */,
+				0CBE7D8A1CCAB0630007E48A /* Storyboard */,
+				0CBE7D8C1CCAB0630007E48A /* View */,
+				0CBE7D8D1CCAB0630007E48A /* ViewController */,
 			);
 			path = Succotash;
+			sourceTree = "<group>";
+		};
+		0CBE7D7F1CCAB0630007E48A /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				0CBE7D801CCAB0630007E48A /* Info.plist */,
+				0CBE7D821CCAB0630007E48A /* LaunchScreen.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		0CBE7D841CCAB0630007E48A /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				0CBE7D851CCAB0630007E48A /* Assets.xcassets */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		0CBE7D861CCAB0630007E48A /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		0CBE7D871CCAB0630007E48A /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				0CBE7D881CCAB0630007E48A /* AppDelegate.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		0CBE7D891CCAB0630007E48A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0CBE7D8A1CCAB0630007E48A /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				0CBE7D8B1CCAB0630007E48A /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		0CBE7D8C1CCAB0630007E48A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0CBE7D8D1CCAB0630007E48A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +184,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CBE7D721CCAAE6C0007E48A /* LaunchScreen.storyboard in Resources */,
-				0CBE7D6F1CCAAE6C0007E48A /* Assets.xcassets in Resources */,
-				0CBE7D6D1CCAAE6C0007E48A /* Main.storyboard in Resources */,
+				0CBE7D8E1CCAB0630007E48A /* Info.plist in Resources */,
+				0CBE7D901CCAB0630007E48A /* Assets.xcassets in Resources */,
+				0CBE7D8F1CCAB0630007E48A /* LaunchScreen.storyboard in Resources */,
+				0CBE7D921CCAB0630007E48A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,26 +198,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CBE7D6A1CCAAE6C0007E48A /* ViewController.swift in Sources */,
-				0CBE7D681CCAAE6C0007E48A /* AppDelegate.swift in Sources */,
+				0CBE7D911CCAB0630007E48A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0CBE7D6B1CCAAE6C0007E48A /* Main.storyboard */ = {
+		0CBE7D801CCAB0630007E48A /* Info.plist */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0CBE7D6C1CCAAE6C0007E48A /* Base */,
+				0CBE7D811CCAB0630007E48A /* Base */,
 			);
-			name = Main.storyboard;
+			name = Info.plist;
 			sourceTree = "<group>";
 		};
-		0CBE7D701CCAAE6C0007E48A /* LaunchScreen.storyboard */ = {
+		0CBE7D821CCAB0630007E48A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0CBE7D711CCAAE6C0007E48A /* Base */,
+				0CBE7D831CCAB0630007E48A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -249,7 +311,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Succotash/Info.plist;
+				INFOPLIST_FILE = Succotash/Base.lproj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sliwakowski.Succotash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -260,7 +322,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Succotash/Info.plist;
+				INFOPLIST_FILE = Succotash/Base.lproj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sliwakowski.Succotash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
