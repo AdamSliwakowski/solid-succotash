@@ -16,6 +16,9 @@ class QuestionsViewController: UIViewController {
     @IBOutlet weak var yesButton: UIButton!
     @IBOutlet weak var noButton: UIButton!
     
+    var timer: NSTimer?
+    var startTime: NSDate!
+    var expirationTime: Double = 10.seconds
     var questionsBlock: QuestionsBlock!
     var questionsBlockIndex: Int! {
         didSet {
@@ -28,10 +31,28 @@ class QuestionsViewController: UIViewController {
         questionsBlockIndex = 0
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        configureTimer()
+    }
+    
     private func loadQuestionsBlock() {
         let questionBlocks = JSON.read("questions")["blocks"].arrayValue.map { QuestionsBlock(json: $0) }
-        guard questionsBlockIndex < questionBlocks.count else { return }
+        guard questionsBlockIndex < questionBlocks.count else {
+            questionsBlockIndex = 0
+            return
+        }
         questionsBlock = questionBlocks[questionsBlockIndex]
+        reloadCollectionView()
+    }
+    
+    private func configureTimer() {
+        startTime = NSDate()
+        timer?.invalidate()
+        timer = NSTimer.after(expirationTime, {
+            self.questionsBlockIndex = self.questionsBlockIndex + 1
+            self.configureTimer()
+        })
     }
 }
 
@@ -50,36 +71,29 @@ extension QuestionsViewController {
         scrollToNextQuestion()
     }
     
-    private func configureButtonsForCurrentQuestion() {
-        let pageWidth = collectionView.frame.width
-        let page = Int(floor(collectionView.contentOffset.x / pageWidth))
-        let questionAnswered = questionsBlock.questions[page].answer != nil
-        [yesButton, noButton].forEach { button in
-            UIView.animateWithDuration(0.3, animations: { button.alpha = CGFloat(questionAnswered ? 0.5 : 1) })
-            button.enabled = !questionAnswered
-        }
-    }
-    
     private func scrollToNextQuestion() {
         let currentIndex = collectionView.indexPathsForVisibleItems().first!.row
         let newIndex = currentIndex + 1
-        if (0..<questionsBlock.questions.count).contains(newIndex) {
+        if questionsBlock.isFinished {
+            presentWaitingViewController()
+        } else {
             let nextIndexPath = NSIndexPath(forItem: newIndex, inSection: 0)
             collectionView.scrollToItemAtIndexPath(nextIndexPath, atScrollPosition: .Left, animated: true)
-        } else {
-            configureButtonsForCurrentQuestion()
-            presentWaitingViewController()
         }
     }
     
     private func presentWaitingViewController() {
         let waitingVC = storyboard?.instantiateViewControllerWithIdentifier("WaitingViewController") as! WaitingViewController
         presentViewController(waitingVC, animated: true) {
+            let timePassed = NSDate().timeIntervalSinceDate(self.startTime)
+            waitingVC.configureTimeLeft(timePassed)
             self.questionsBlockIndex = self.questionsBlockIndex + 1
-            self.collectionView.reloadData()
-            self.collectionView.scrollToItemAtIndexPath(NSIndexPath(forItem: 0, inSection: 0), atScrollPosition: .Left, animated: true)
-            self.configureButtonsForCurrentQuestion()
         }
+    }
+    
+    private func reloadCollectionView() {
+        collectionView.reloadData()
+        collectionView.scrollToItemAtIndexPath(NSIndexPath(forItem: 0, inSection: 0), atScrollPosition: .Left, animated: true)
     }
 }
 
@@ -90,18 +104,12 @@ extension QuestionsViewController: UICollectionViewDataSource {
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return questionsBlock.questions.count
+        return questionsBlock.size
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("QuestionCell", forIndexPath: indexPath) as! QuestionCell
         cell.configure(questionsBlock.questions[indexPath.row])
         return cell
-    }
-}
-
-extension QuestionsViewController: UIScrollViewDelegate {
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        configureButtonsForCurrentQuestion()
     }
 }
