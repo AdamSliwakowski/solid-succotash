@@ -115,9 +115,8 @@ extension QuestionsViewController {
 extension QuestionsViewController {
     private func presentWaitingViewController() {
         let waitingVC = storyboard?.instantiateViewControllerWithIdentifier("WaitingViewController") as! WaitingViewController
-        presentViewController(waitingVC, animated: true) { [unowned self] in
-            self.configureWaitingVC(waitingVC)
-        }
+        configureWaitingVC(waitingVC)
+        presentViewController(waitingVC, animated: true, completion: nil)
     }
     
     private func configureWaitingVC(vc: WaitingViewController) {
@@ -130,9 +129,8 @@ extension QuestionsViewController {
         timer?.invalidate()
         timer = nil
         let waitingVC = storyboard?.instantiateViewControllerWithIdentifier("WaitingViewController") as! WaitingViewController
-        presentViewController(waitingVC, animated: true) {
-            waitingVC.configureWithoutTimer()
-        }
+        waitingVC.configureWithoutTimer()
+        presentViewController(waitingVC, animated: true, completion: nil)
     }
 }
 
