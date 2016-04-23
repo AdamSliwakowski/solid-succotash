@@ -11,8 +11,13 @@ import SwiftyTimer
 
 class WaitingViewController: UIViewController {
     
-    @IBOutlet weak var timeLeftLabel: UILabel!
-    private var timer: NSTimer!
+    @IBOutlet weak var timeLeftLabel: UILabel? {
+        didSet {
+            timeLeftLabel?.text = nil
+        }
+    }
+    var shouldCount: Bool = true
+    private var timer: NSTimer?
     private var timeLeft = 10.seconds {
         didSet {
             configureTimeLeftText()
@@ -26,7 +31,7 @@ class WaitingViewController: UIViewController {
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        timer.invalidate()
+        timer?.invalidate()
     }
 }
 
@@ -36,12 +41,14 @@ extension WaitingViewController {
     }
     
     func configureWithoutTimer() {
-        timer.invalidate()
-        timeLeftLabel.text = nil
+        shouldCount = false
+        timeLeftLabel?.text = nil
     }
     
     private func configureTimer() {
+        guard shouldCount else { return }
         timer = NSTimer.every(1.second, handleTimer)
+        configureTimeLeftText()
     }
     
     private func handleTimer() {
@@ -51,6 +58,7 @@ extension WaitingViewController {
     }
     
     private func configureTimeLeftText() {
+        guard let timeLeftLabel = timeLeftLabel else { return }
         let minutes = Int(timeLeft / 60)
         let seconds = Int(timeLeft) - (minutes * 60)
         timeLeftLabel.text = String(format: "%02d", minutes) + ":" + String(format: "%02d", seconds)
