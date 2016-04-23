@@ -1,27 +1,64 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="lOc-ed-vDp">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="EHf-IW-A2E">
+        <scene sceneID="uMx-TL-To2">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="lOc-ed-vDp" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
-                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                        <viewControllerLayoutGuide type="top" id="vkv-nM-lkI"/>
+                        <viewControllerLayoutGuide type="bottom" id="GBO-dI-vpm"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="bak-f6-xJN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7R-b7-6dU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ht1-YW-7Xd" userLabel="Logo">
+                                        <rect key="frame" x="0.0" y="25" width="375" height="34"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Uh-mt-PtP" userLabel="BottomBorder">
+                                        <rect key="frame" x="0.0" y="63" width="375" height="1"/>
+                                        <color key="backgroundColor" white="0.84868421049999998" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="McL-gg-9sH"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="3Uh-mt-PtP" secondAttribute="trailing" id="N0a-0a-Uzt"/>
+                                    <constraint firstItem="3Uh-mt-PtP" firstAttribute="leading" secondItem="V7R-b7-6dU" secondAttribute="leading" id="VCF-2k-cgV"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ht1-YW-7Xd" secondAttribute="bottom" constant="5" id="WmI-6O-q8x"/>
+                                    <constraint firstItem="Ht1-YW-7Xd" firstAttribute="top" secondItem="V7R-b7-6dU" secondAttribute="top" constant="25" id="ZCc-an-odU"/>
+                                    <constraint firstAttribute="bottom" secondItem="3Uh-mt-PtP" secondAttribute="bottom" id="aW2-03-PR5"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ht1-YW-7Xd" secondAttribute="trailing" id="ayT-ai-bzk"/>
+                                    <constraint firstAttribute="height" constant="64" id="fUv-vQ-jsb"/>
+                                    <constraint firstItem="Ht1-YW-7Xd" firstAttribute="leading" secondItem="V7R-b7-6dU" secondAttribute="leading" id="sxI-Cq-EYp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98431372549999996" green="0.98823529409999999" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="V7R-b7-6dU" firstAttribute="top" secondItem="bak-f6-xJN" secondAttribute="top" id="GGh-AG-Ws5"/>
+                            <constraint firstItem="V7R-b7-6dU" firstAttribute="leading" secondItem="bak-f6-xJN" secondAttribute="leading" id="T55-MN-jCA"/>
+                            <constraint firstAttribute="trailing" secondItem="V7R-b7-6dU" secondAttribute="trailing" id="bFw-nh-6Cm"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0k2-vd-yPT" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="1010.5" y="302.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_logo" width="143" height="34"/>
+    </resources>
 </document>
