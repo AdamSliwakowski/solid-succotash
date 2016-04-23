@@ -28,17 +28,26 @@ class WaitingViewController: UIViewController {
         super.viewWillDisappear(animated)
         timer.invalidate()
     }
-    
+}
+
+extension WaitingViewController {
     func configureTimeLeft(seconds: Double) {
         timeLeft = timeLeft - seconds
     }
     
+    func configureWithoutTimer() {
+        timer.invalidate()
+        timeLeftLabel.text = nil
+    }
+    
     private func configureTimer() {
-        timer = NSTimer.every(1.second) {
-            self.timeLeft = self.timeLeft - 1
-            guard Int(self.timeLeft) == 0 else { return }
-            self.dismissViewControllerAnimated(true, completion: nil)
-        }
+        timer = NSTimer.every(1.second, handleTimer)
+    }
+    
+    private func handleTimer() {
+        timeLeft = timeLeft - 1
+        guard Int(timeLeft) == 0 else { return }
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     private func configureTimeLeftText() {

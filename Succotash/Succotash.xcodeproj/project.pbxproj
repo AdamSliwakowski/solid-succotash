@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CB2F3F31CCB6ECD00BB91D5 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB2F3F21CCB6ECD00BB91D5 /* UICollectionViewExtension.swift */; };
 		0CBE7D8F1CCAB0630007E48A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE7D821CCAB0630007E48A /* LaunchScreen.storyboard */; };
 		0CBE7D901CCAB0630007E48A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE7D851CCAB0630007E48A /* Assets.xcassets */; };
 		0CBE7D911CCAB0630007E48A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE7D881CCAB0630007E48A /* AppDelegate.swift */; };
@@ -17,12 +18,14 @@
 		0CBE7D9A1CCAB66C0007E48A /* JSONExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE7D991CCAB66C0007E48A /* JSONExtension.swift */; };
 		0CBE7D9E1CCAB6FA0007E48A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBE7D9C1CCAB6FA0007E48A /* SwiftyJSON.framework */; };
 		0CBE7D9F1CCAB6FA0007E48A /* SwiftyTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBE7D9D1CCAB6FA0007E48A /* SwiftyTimer.framework */; };
+		0CBE91971CCB6E4F00E8C92E /* QuestionsBlocksProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE91961CCB6E4F00E8C92E /* QuestionsBlocksProvider.swift */; };
 		0CC0F6281CCABE4B006BAB7E /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0F6271CCABE4B006BAB7E /* QuestionsViewController.swift */; };
 		0CC0F62A1CCAC25C006BAB7E /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0F6291CCAC25C006BAB7E /* QuestionCell.swift */; };
 		0CC0F62C1CCACEF9006BAB7E /* WaitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0F62B1CCACEF9006BAB7E /* WaitingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CB2F3F21CCB6ECD00BB91D5 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 		0CBE7D641CCAAE6C0007E48A /* Succotash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Succotash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CBE7D811CCAB0630007E48A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Info.plist; sourceTree = "<group>"; };
 		0CBE7D831CCAB0630007E48A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +38,7 @@
 		0CBE7D991CCAB66C0007E48A /* JSONExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONExtension.swift; sourceTree = "<group>"; };
 		0CBE7D9C1CCAB6FA0007E48A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = ../Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		0CBE7D9D1CCAB6FA0007E48A /* SwiftyTimer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyTimer.framework; path = ../Carthage/Build/iOS/SwiftyTimer.framework; sourceTree = "<group>"; };
+		0CBE91961CCB6E4F00E8C92E /* QuestionsBlocksProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsBlocksProvider.swift; sourceTree = "<group>"; };
 		0CC0F6271CCABE4B006BAB7E /* QuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		0CC0F6291CCAC25C006BAB7E /* QuestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
 		0CC0F62B1CCACEF9006BAB7E /* WaitingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitingViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 			children = (
 				0CBE7D881CCAB0630007E48A /* AppDelegate.swift */,
 				0CBE7D991CCAB66C0007E48A /* JSONExtension.swift */,
+				0CBE91961CCB6E4F00E8C92E /* QuestionsBlocksProvider.swift */,
+				0CB2F3F21CCB6ECD00BB91D5 /* UICollectionViewExtension.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -250,6 +256,8 @@
 				0CC0F6281CCABE4B006BAB7E /* QuestionsViewController.swift in Sources */,
 				0CBE7D911CCAB0630007E48A /* AppDelegate.swift in Sources */,
 				0CC0F62C1CCACEF9006BAB7E /* WaitingViewController.swift in Sources */,
+				0CB2F3F31CCB6ECD00BB91D5 /* UICollectionViewExtension.swift in Sources */,
+				0CBE91971CCB6E4F00E8C92E /* QuestionsBlocksProvider.swift in Sources */,
 				0CC0F62A1CCAC25C006BAB7E /* QuestionCell.swift in Sources */,
 				0CBE7D961CCAB43F0007E48A /* Question.swift in Sources */,
 				0CBE7D9A1CCAB66C0007E48A /* JSONExtension.swift in Sources */,
