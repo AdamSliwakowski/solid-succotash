@@ -1,2 +1,4 @@
 github "SwiftyJSON/SwiftyJSON" "2.3.3"
 github "radex/SwiftyTimer" "1.4.0"
+github "facebook/pop" "1.0.9"
+github "Yalantis/Koloda" "3.0.0"

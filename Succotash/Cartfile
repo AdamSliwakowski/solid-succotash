@@ -1,2 +1,3 @@
 github "SwiftyJSON/SwiftyJSON"
-github "radex/SwiftyTimer
+github "radex/SwiftyTimer"
+github "Yalantis/Koloda"

@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0CB2F3F31CCB6ECD00BB91D5 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB2F3F21CCB6ECD00BB91D5 /* UICollectionViewExtension.swift */; };
+		0CB2F3F71CCB7A1F00BB91D5 /* Koloda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB2F3F61CCB7A1F00BB91D5 /* Koloda.framework */; };
+		0CB2F3FA1CCB7A2600BB91D5 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB2F3F81CCB7A2600BB91D5 /* SwiftyJSON.framework */; };
+		0CB2F3FB1CCB7A2600BB91D5 /* SwiftyTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB2F3F91CCB7A2600BB91D5 /* SwiftyTimer.framework */; };
+		0CB2F3FD1CCB7A3C00BB91D5 /* pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB2F3FC1CCB7A3C00BB91D5 /* pop.framework */; };
+		0CB2F3FF1CCB7D3200BB91D5 /* QuestionsTinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB2F3FE1CCB7D3200BB91D5 /* QuestionsTinderViewController.swift */; };
+		0CB2F4011CCB7FB600BB91D5 /* QuestionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB2F4001CCB7FB600BB91D5 /* QuestionCard.swift */; };
+		0CB2F4031CCB7FD200BB91D5 /* QuestionCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CB2F4021CCB7FD200BB91D5 /* QuestionCard.xib */; };
 		0CBE7D8F1CCAB0630007E48A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE7D821CCAB0630007E48A /* LaunchScreen.storyboard */; };
 		0CBE7D901CCAB0630007E48A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CBE7D851CCAB0630007E48A /* Assets.xcassets */; };
 		0CBE7D911CCAB0630007E48A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE7D881CCAB0630007E48A /* AppDelegate.swift */; };
@@ -16,8 +23,6 @@
 		0CBE7D961CCAB43F0007E48A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE7D951CCAB43F0007E48A /* Question.swift */; };
 		0CBE7D981CCAB44E0007E48A /* QuestionsBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE7D971CCAB44E0007E48A /* QuestionsBlock.swift */; };
 		0CBE7D9A1CCAB66C0007E48A /* JSONExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE7D991CCAB66C0007E48A /* JSONExtension.swift */; };
-		0CBE7D9E1CCAB6FA0007E48A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBE7D9C1CCAB6FA0007E48A /* SwiftyJSON.framework */; };
-		0CBE7D9F1CCAB6FA0007E48A /* SwiftyTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CBE7D9D1CCAB6FA0007E48A /* SwiftyTimer.framework */; };
 		0CBE91971CCB6E4F00E8C92E /* QuestionsBlocksProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBE91961CCB6E4F00E8C92E /* QuestionsBlocksProvider.swift */; };
 		0CC0F6281CCABE4B006BAB7E /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0F6271CCABE4B006BAB7E /* QuestionsViewController.swift */; };
 		0CC0F62A1CCAC25C006BAB7E /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0F6291CCAC25C006BAB7E /* QuestionCell.swift */; };
@@ -26,6 +31,13 @@
 
 /* Begin PBXFileReference section */
 		0CB2F3F21CCB6ECD00BB91D5 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
+		0CB2F3F61CCB7A1F00BB91D5 /* Koloda.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Koloda.framework; path = Carthage/Build/iOS/Koloda.framework; sourceTree = "<group>"; };
+		0CB2F3F81CCB7A2600BB91D5 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		0CB2F3F91CCB7A2600BB91D5 /* SwiftyTimer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyTimer.framework; path = Carthage/Build/iOS/SwiftyTimer.framework; sourceTree = "<group>"; };
+		0CB2F3FC1CCB7A3C00BB91D5 /* pop.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = pop.framework; path = Carthage/Build/iOS/pop.framework; sourceTree = "<group>"; };
+		0CB2F3FE1CCB7D3200BB91D5 /* QuestionsTinderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsTinderViewController.swift; sourceTree = "<group>"; };
+		0CB2F4001CCB7FB600BB91D5 /* QuestionCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCard.swift; sourceTree = "<group>"; };
+		0CB2F4021CCB7FD200BB91D5 /* QuestionCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionCard.xib; sourceTree = "<group>"; };
 		0CBE7D641CCAAE6C0007E48A /* Succotash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Succotash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CBE7D811CCAB0630007E48A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Info.plist; sourceTree = "<group>"; };
 		0CBE7D831CCAB0630007E48A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,8 +61,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CBE7D9E1CCAB6FA0007E48A /* SwiftyJSON.framework in Frameworks */,
-				0CBE7D9F1CCAB6FA0007E48A /* SwiftyTimer.framework in Frameworks */,
+				0CB2F3FD1CCB7A3C00BB91D5 /* pop.framework in Frameworks */,
+				0CB2F3F71CCB7A1F00BB91D5 /* Koloda.framework in Frameworks */,
+				0CB2F3FA1CCB7A2600BB91D5 /* SwiftyJSON.framework in Frameworks */,
+				0CB2F3FB1CCB7A2600BB91D5 /* SwiftyTimer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				0CC0F6291CCAC25C006BAB7E /* QuestionCell.swift */,
+				0CB2F4001CCB7FB600BB91D5 /* QuestionCard.swift */,
+				0CB2F4021CCB7FD200BB91D5 /* QuestionCard.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -147,6 +163,7 @@
 			children = (
 				0CC0F6271CCABE4B006BAB7E /* QuestionsViewController.swift */,
 				0CC0F62B1CCACEF9006BAB7E /* WaitingViewController.swift */,
+				0CB2F3FE1CCB7D3200BB91D5 /* QuestionsTinderViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -154,6 +171,10 @@
 		0CBE7DA01CCAB7160007E48A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0CB2F3FC1CCB7A3C00BB91D5 /* pop.framework */,
+				0CB2F3F81CCB7A2600BB91D5 /* SwiftyJSON.framework */,
+				0CB2F3F91CCB7A2600BB91D5 /* SwiftyTimer.framework */,
+				0CB2F3F61CCB7A1F00BB91D5 /* Koloda.framework */,
 				0CBE7D9C1CCAB6FA0007E48A /* SwiftyJSON.framework */,
 				0CBE7D9D1CCAB6FA0007E48A /* SwiftyTimer.framework */,
 			);
@@ -222,6 +243,7 @@
 				0CBE7D941CCAB2EE0007E48A /* questions.json in Resources */,
 				0CBE7D901CCAB0630007E48A /* Assets.xcassets in Resources */,
 				0CBE7D8F1CCAB0630007E48A /* LaunchScreen.storyboard in Resources */,
+				0CB2F4031CCB7FD200BB91D5 /* QuestionCard.xib in Resources */,
 				0CBE7D921CCAB0630007E48A /* Questions.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,6 +259,8 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyTimer.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Koloda.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/pop.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -252,10 +276,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CB2F3FF1CCB7D3200BB91D5 /* QuestionsTinderViewController.swift in Sources */,
 				0CBE7D981CCAB44E0007E48A /* QuestionsBlock.swift in Sources */,
 				0CC0F6281CCABE4B006BAB7E /* QuestionsViewController.swift in Sources */,
 				0CBE7D911CCAB0630007E48A /* AppDelegate.swift in Sources */,
 				0CC0F62C1CCACEF9006BAB7E /* WaitingViewController.swift in Sources */,
+				0CB2F4011CCB7FB600BB91D5 /* QuestionCard.swift in Sources */,
 				0CB2F3F31CCB6ECD00BB91D5 /* UICollectionViewExtension.swift in Sources */,
 				0CBE91971CCB6E4F00E8C92E /* QuestionsBlocksProvider.swift in Sources */,
 				0CC0F62A1CCAC25C006BAB7E /* QuestionCell.swift in Sources */,
