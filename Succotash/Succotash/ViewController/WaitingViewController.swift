@@ -47,7 +47,7 @@ extension WaitingViewController {
     private func handleTimer() {
         timeLeft = timeLeft - 1
         guard Int(timeLeft) == 0 else { return }
-        self.dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     private func configureTimeLeftText() {

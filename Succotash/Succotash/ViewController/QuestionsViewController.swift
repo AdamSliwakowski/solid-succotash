@@ -78,9 +78,9 @@ extension QuestionsViewController {
     }
     
     private func timerHandler() {
-        self.configureTimer()
+        configureTimer()
         let newIndex = questionsBlockIndex + 1
-        self.questionsBlockIndex = newIndex
+        questionsBlockIndex = newIndex
     }
 }
 
@@ -115,11 +115,13 @@ extension QuestionsViewController {
 extension QuestionsViewController {
     private func presentWaitingViewController() {
         let waitingVC = storyboard?.instantiateViewControllerWithIdentifier("WaitingViewController") as! WaitingViewController
-        presentViewController(waitingVC, animated: true) { [unowned self] in self.configureWaitingVC(waitingVC) }
+        presentViewController(waitingVC, animated: true) { [unowned self] in
+            self.configureWaitingVC(waitingVC)
+        }
     }
     
     private func configureWaitingVC(vc: WaitingViewController) {
-        let timePassed = NSDate().timeIntervalSinceDate(self.startTime)
+        let timePassed = NSDate().timeIntervalSinceDate(startTime)
         questionsBlockIndex = questionsBlockIndex + 1
         provider.current != nil ? vc.configureTimeLeft(timePassed) : vc.configureWithoutTimer()
     }
