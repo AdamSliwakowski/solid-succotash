@@ -13,23 +13,24 @@ import SwiftyTimer
 class QuestionsViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var yesButton: UIButton!
     @IBOutlet weak var noButton: UIButton!
     
     var timer: NSTimer?
     var startTime: NSDate!
-    var coordinator: QuestionsBlocksProvider!
+    var provider: QuestionsBlocksProvider!
     var expirationTime: Double = 10.seconds
     var questionsBlockIndex: Int! {
         didSet {
-            coordinator.index = questionsBlockIndex
+            provider.index = questionsBlockIndex
             loadQuestionsBlock()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        coordinator = QuestionsBlocksProvider()
+        provider = QuestionsBlocksProvider()
         questionsBlockIndex = 0
     }
     
@@ -41,25 +42,31 @@ class QuestionsViewController: UIViewController {
 
 extension QuestionsViewController {
     private func loadQuestionsBlock() {
-        guard let _ = coordinator.blocks else { return }
+        guard let _ = provider.blocks else { return }
         saveCurrentBlock()
-        coordinator.next()
+        provider.next()
         reloadCollectionView()
     }
     
     private func saveCurrentBlock() {
-        if let currentBlock = coordinator.current {
-            self.coordinator.blocks![questionsBlockIndex - 1] = currentBlock
+        if let currentBlock = provider.current {
+            provider.blocks![questionsBlockIndex - 1] = currentBlock
         }
     }
     
     private func reloadCollectionView() {
-        guard let _ = coordinator.current else {
+        guard let _ = provider.current else {
             finish()
             return
         }
         collectionView.reloadData()
         collectionView.scrollToBegin()
+        resetPageControl()
+    }
+    
+    private func resetPageControl() {
+        pageControl.currentPage = 0
+        pageControl.numberOfPages = provider.current!.size
     }
 }
 
@@ -88,17 +95,18 @@ extension QuestionsViewController {
     
     private func setAnswerForCurrentQuestion(answer: Bool) {
         let currentIndex = collectionView.currentIndexRow
-        coordinator.current!.questions[currentIndex].answer = answer
+        provider.current!.questions[currentIndex].answer = answer
         scrollToNextQuestion()
     }
     
     private func scrollToNextQuestion() {
         let currentIndex = collectionView.currentIndexRow
         let newIndex = currentIndex + 1
-        if coordinator.current!.isFinished {
+        if provider.current!.isFinished {
             presentWaitingViewController()
         } else {
             let nextIndexPath = NSIndexPath(forItem: newIndex, inSection: 0)
+            pageControl.currentPage = newIndex
             collectionView.scrollToItemAtIndexPath(nextIndexPath, atScrollPosition: .Left, animated: true)
         }
     }
@@ -112,8 +120,8 @@ extension QuestionsViewController {
     
     private func configureWaitingVC(vc: WaitingViewController) {
         let timePassed = NSDate().timeIntervalSinceDate(self.startTime)
-        self.questionsBlockIndex = self.questionsBlockIndex + 1
-        self.coordinator.current != nil ? vc.configureTimeLeft(timePassed) : vc.configureWithoutTimer()
+        questionsBlockIndex = questionsBlockIndex + 1
+        provider.current != nil ? vc.configureTimeLeft(timePassed) : vc.configureWithoutTimer()
     }
     
     private func finish() {
@@ -132,12 +140,12 @@ extension QuestionsViewController: UICollectionViewDataSource {
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return coordinator.current!.size
+        return provider.current!.size
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("QuestionCell", forIndexPath: indexPath) as! QuestionCell
-        cell.configure(coordinator.current!.questions[indexPath.row])
+        cell.configure(provider.current!.questions[indexPath.row])
         return cell
     }
 }

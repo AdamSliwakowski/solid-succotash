@@ -44,11 +44,13 @@
                                     <constraint firstAttribute="trailing" secondItem="j1E-WP-ZqY" secondAttribute="trailing" id="rjn-Jk-Hq2"/>
                                 </constraints>
                             </view>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="l4V-rB-61s">
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" defersCurrentPageDisplay="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="l4V-rB-61s">
                                 <rect key="frame" x="16" y="84" width="343" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="iBs-bQ-6bb"/>
                                 </constraints>
+                                <color key="pageIndicatorTintColor" red="0.7686274509803922" green="0.8784313725490196" blue="0.83529411764705885" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.33725490196078434" green="0.6470588235294118" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xwB-zn-g6l">
                                 <rect key="frame" x="20" y="141" width="335" height="350"/>
@@ -149,6 +151,7 @@
                     <connections>
                         <outlet property="collectionView" destination="xwB-zn-g6l" id="bHY-Lb-s9U"/>
                         <outlet property="noButton" destination="9vy-64-GT1" id="oNN-u7-1xr"/>
+                        <outlet property="pageControl" destination="l4V-rB-61s" id="G2s-yk-bDb"/>
                         <outlet property="yesButton" destination="JNU-eh-FjR" id="4zf-se-kln"/>
                     </connections>
                 </viewController>
